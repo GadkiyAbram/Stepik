@@ -1,0 +1,16 @@
+private String printTextPerRole(String[] roles, String[] textLines) {
+   StringBuilder stringBuilderRole = new StringBuilder();
+        for (int i = 0; i < roles.length; i++){
+            stringBuilderRole.append(roles[i] + ":\n");
+            for (int j = 0; j < textLines.length; j++){
+                if (textLines[j].startsWith(roles[i] + ": ")){
+                    stringBuilderRole = stringBuilderRole.append(j + 1)
+                            .append(") ")
+                            .append(textLines[j].replaceFirst(roles[i] + ": ", ""))
+                            .append("\n");
+                }
+            }
+            stringBuilderRole.append("\n");
+        }
+    return stringBuilderRole.toString();
+}
