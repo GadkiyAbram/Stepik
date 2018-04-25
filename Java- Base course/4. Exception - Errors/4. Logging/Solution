@@ -1,0 +1,11 @@
+private static void configureLogging() {
+    Logger.getLogger("org.stepic.java.logging.ClassA").setLevel(Level.ALL);
+    Logger.getLogger("org.stepic.java.logging.ClassB").setLevel(Level.WARNING);
+    Formatter xmlFormatter = new XMLFormatter();
+    Handler xmlHandlerA = new ConsoleHandler();
+    xmlHandlerA.setLevel(Level.ALL);
+    xmlHandlerA.setFormatter(xmlFormatter);
+    Logger loogerCommon = Logger.getLogger("org.stepic.java");
+    loogerCommon.setUseParentHandlers(false);
+    loogerCommon.addHandler(xmlHandlerA);
+}
