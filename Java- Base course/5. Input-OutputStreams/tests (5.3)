@@ -1,0 +1,17 @@
+//Test files for 5.3 task:
+//Create & add files to Project root directory
+
+test1:
+1.00 23.2 some 7sym87.bols
+23.7
+9282
+
+test2:
+1 2 3
+
+test3:
+a1 b2 c3
+
+test4:
+-1e3
+18 .111 11bbb
